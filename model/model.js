@@ -8,7 +8,7 @@ const PersonModel = Mongoose.model("People", {
 
 PersonModel.login = function(name,pass,result){
     // Kiểm tra email có tồn tại hay không
-    PersonModel.find({ Name:name, Password:pass},function (err, docs) {
+    PersonModel.find({ Username:name, Password:pass},function (err, docs) {
         if(err) result(err)
         if(docs[0]==null) result("User not found")
         else {

@@ -1,6 +1,6 @@
 var DangNhap = require('../model/model');
 exports.login = function(req,res){
-    DangNhap.login(req.body.name,req.body.password,function(respone){
+    DangNhap.login(req.body.Username,req.body.Password,function(respone){
        res.send({result:respone});
     }); 
 }
