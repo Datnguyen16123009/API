@@ -28,7 +28,7 @@ PersonModel.join = function(req,result){
     PersonModel.find({ Name:req.Username, Password:req.Password},function (err, docs) {
         if(err) result(err)
         if(docs[0]==null) {
-            const user={"Username":req.Username};
+            const user={"Username":req.Username,"Password":req.Password};
             var person = new PersonModel(user);
             const User = person.save();
             console.log(person)
